@@ -33,7 +33,8 @@ import {
   InputGroup,
   InputGroupText,
   InputGroupAddon,
-  Input
+  Input,
+  Button,
 } from "reactstrap";
 
 import routes from "routes.js";
@@ -106,45 +107,22 @@ function Header(props) {
       }
     >
       <Container fluid>
-        <div className="navbar-wrapper">
-          <div className="navbar-toggle">
-            <button
-              type="button"
-              ref={sidebarToggle}
-              className="navbar-toggler"
-              onClick={() => openSidebar()}
-            >
-              <span className="navbar-toggler-bar bar1" />
-              <span className="navbar-toggler-bar bar2" />
-              <span className="navbar-toggler-bar bar3" />
-            </button>
-          </div>
-          <NavbarBrand href="/">{getBrand()}</NavbarBrand>
+        <div className="navbar-wrapper title">
+          <NavbarBrand href="/" className="text-info">
+            M🌑ON
+          </NavbarBrand>
         </div>
         <NavbarToggler onClick={toggle}>
           <span className="navbar-toggler-bar navbar-kebab" />
           <span className="navbar-toggler-bar navbar-kebab" />
           <span className="navbar-toggler-bar navbar-kebab" />
         </NavbarToggler>
-        <Collapse isOpen={isOpen} navbar className="justify-content-end">
-          <form>
-            <InputGroup className="no-border">
-              <Input placeholder="Search..." />
-              <InputGroupAddon addonType="append">
-                <InputGroupText>
-                  <i className="nc-icon nc-zoom-split" />
-                </InputGroupText>
-              </InputGroupAddon>
-            </InputGroup>
-          </form>
+        <Collapse isOpen={isOpen} navbar className="justify-content-start">
           <Nav navbar>
             <NavItem>
-              <Link to="#pablo" className="nav-link btn-magnify">
-                <i className="nc-icon nc-layout-11" />
-                <p>
-                  <span className="d-lg-none d-md-block">Stats</span>
-                </p>
-              </Link>
+              <Button color="primary" fab round icon>
+                <i className="fa fa-heart"></i>
+              </Button>
             </NavItem>
             <Dropdown
               nav
@@ -170,6 +148,11 @@ function Header(props) {
                   <span className="d-lg-none d-md-block">Account</span>
                 </p>
               </Link>
+            </NavItem>
+            <NavItem>
+              <Button color="primary" fab round icon>
+                <i className="fa fa-heart"></i>
+              </Button>
             </NavItem>
           </Nav>
         </Collapse>

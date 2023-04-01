@@ -41,7 +41,7 @@ function Footer(props) {
               </li>
               <li>
                 <a href="https://www.creative-tim.com/license" target="_blank">
-                  Licenses
+                  Ergo
                 </a>
               </li>
             </ul>
@@ -60,7 +60,7 @@ function Footer(props) {
 
 Footer.propTypes = {
   default: PropTypes.bool,
-  fluid: PropTypes.bool
+  fluid: PropTypes.bool,
 };
 
 export default Footer;

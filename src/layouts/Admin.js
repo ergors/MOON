@@ -59,19 +59,14 @@ function Dashboard(props) {
   };
   return (
     <div className="wrapper">
-      <Sidebar
-        {...props}
-        routes={routes}
-        bgColor={backgroundColor}
-        activeColor={activeColor}
-      />
       <div className="main-panel" ref={mainPanel}>
         <DemoNavbar {...props} />
         <Switch>
           {routes.map((prop, key) => {
             return (
               <Route
-                path={prop.layout + prop.path}
+                exact
+                path={prop.path}
                 component={prop.component}
                 key={key}
               />
@@ -80,12 +75,14 @@ function Dashboard(props) {
         </Switch>
         <Footer fluid />
       </div>
+      {/* 
       <FixedPlugin
         bgColor={backgroundColor}
         activeColor={activeColor}
         handleActiveClick={handleActiveClick}
         handleBgClick={handleBgClick}
       />
+      */}
     </div>
   );
 }
