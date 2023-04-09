@@ -1,0 +1,13 @@
+.pipes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    width: 100%;
+}
+  
+.pipe {
+    position: relative;
+    width: 1px;
+    height: 5px;
+    background-color: grey;
+}

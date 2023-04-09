@@ -17,7 +17,7 @@
     "sass": "1.53.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build && gulp licenses",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -43,6 +43,7 @@
     "typescript": "4.7.4"
   },
   "devDependencies": {
+    "@iconify/react": "^4.1.0",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.9"
   }
