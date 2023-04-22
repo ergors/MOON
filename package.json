@@ -6,6 +6,7 @@
     "bootstrap": "4.6.0",
     "chart.js": "3.2.1",
     "jquery": "3.6.0",
+    "monaco-editor": "^0.37.1",
     "perfect-scrollbar": "1.5.5",
     "react": "18.2.0",
     "react-chartjs-2": "3.0.3",

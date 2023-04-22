@@ -42,7 +42,7 @@ import { Icon } from "@iconify/react";
 
 import routes from "routes.js";
 
-function Header(props) {
+function Toolbar(props) {
   const [isOpen, setIsOpen] = React.useState(false);
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
   const [color, setColor] = React.useState("transparent");
@@ -56,23 +56,7 @@ function Header(props) {
     }
     setIsOpen(!isOpen);
   };
-  const dropdownToggle = (e) => {
-    setDropdownOpen(!dropdownOpen);
-  };
-  const getBrand = () => {
-    let brandName = "Default Brand";
-    routes.map((prop, key) => {
-      if (window.location.href.indexOf(prop.layout + prop.path) !== -1) {
-        brandName = prop.name;
-      }
-      return null;
-    });
-    return brandName;
-  };
-  const openSidebar = () => {
-    document.documentElement.classList.toggle("nav-open");
-    sidebarToggle.current.classList.toggle("toggled");
-  };
+
   // function that adds color dark/transparent to the navbar on resize (this is for the collapse)
   const updateColor = () => {
     if (window.innerWidth < 993 && isOpen) {
@@ -274,4 +258,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default Toolbar;
