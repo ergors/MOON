@@ -31,6 +31,7 @@ var routes = [
     name: "Dashboard",
     icon: "nc-icon nc-bank",
     component: Dashboard,
+    layout: "/admin",
   },
   {
     path: "/icons",

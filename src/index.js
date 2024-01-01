@@ -18,7 +18,7 @@
 */
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "assets/scss/paper-dashboard.scss?v=1.3.0";
@@ -31,8 +31,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <BrowserRouter>
-    <Switch>
+    <Routes>
       <Route render={(props) => <AdminLayout {...props} />} />
-    </Switch>
+    </Routes>
   </BrowserRouter>
 );
